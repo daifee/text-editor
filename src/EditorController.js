@@ -243,4 +243,12 @@ export default class EditorController {
     this.model.setContent(content);
   }
 
+  rerender() {
+    let content = this.model.getContent();
+    const charList = this.parser.flatContent(content);
+    content = this.parser.layout(charList);
+
+    this.model.setContent(content);
+  }
+
 }
