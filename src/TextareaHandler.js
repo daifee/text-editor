@@ -79,7 +79,7 @@ export default class TextareaHandler {
     if (handler) {
       handler.call(this, event);
     } else {
-      console.warn('未处理的事件', event);
+      // console.warn('未处理的事件', event);
     }
   }
 
@@ -132,7 +132,7 @@ export default class TextareaHandler {
     if (handler) {
       handler.call(this, event);
     } else {
-      console.warn('未处理的事件', event);
+      // console.warn('未处理的事件', event);
     }
   }
 
