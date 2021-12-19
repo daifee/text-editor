@@ -1,3 +1,4 @@
+import { LAST_CHAR_OBJ } from "./utils";
 
 
 export default class EditorModel {
@@ -6,7 +7,9 @@ export default class EditorModel {
 
     this._data = {
       scrollTop: 0,
-      content: [],
+      content: [
+        [LAST_CHAR_OBJ]
+      ],
       active: false,
       cursorPosition: {rowIndex: 0, colIndex: 0},
       /**
@@ -46,6 +49,19 @@ export default class EditorModel {
     return this.get('content');
   }
   setContent(value, silent) {
+    // 最后一个字符
+    const rowIndex = value.length > 0 ? value.length - 1 : 0;
+    let row = value[rowIndex];
+    if (!row) {
+      row = [];
+      value.push(row);
+    }
+    const colIndex = row.length > 0 ? row.length - 1 : 0;
+    const char = row[colIndex];
+    if (char !== LAST_CHAR_OBJ) {
+      row.push(LAST_CHAR_OBJ);
+    }
+
     this.set('content', value, silent);
   }
 
