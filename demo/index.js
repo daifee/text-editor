@@ -9,6 +9,10 @@ window.addEventListener('resize', () => {
 })
 
 editor.setContent(`
+
+TextEditor
+
+
 岳阳楼记
 【作者】范仲淹 【朝代】宋
 庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴，乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上，属予作文以记之。

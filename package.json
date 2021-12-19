@@ -2,10 +2,13 @@
   "name": "text-editor",
   "version": "1.0.0",
   "description": "功能简单的文本编辑器",
-  "main": "index.js",
+  "main": "dist/text-editor.min.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo:dev": "webpack serve --config ./demo/webpack.config.dev.js"
+    "demo:dev": "webpack serve --config ./demo/webpack.config.dev.js",
+    "demo:prod": "webpack --config ./demo/webpack.config.prod.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
