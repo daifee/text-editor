@@ -1,0 +1,49 @@
+
+textarea.cursor,
+div.cursor {
+  position: absolute;
+  z-index: 99;
+  left: 0px;
+  top: 0px;
+  width: 0px;
+  padding: 0px;
+  transform-origin: left top;
+}
+
+
+textarea.cursor {
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+}
+
+div.cursor {
+  opacity: 1;
+  background-color: #ffffff;
+  animation: 0.8s steps(2, jump-none) 0.5s infinite alternate flicker-0;
+  animation-name: flicker-1;
+}
+
+
+@keyframes flicker-0 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker-1 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
